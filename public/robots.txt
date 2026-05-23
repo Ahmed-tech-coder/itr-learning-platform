@@ -1,0 +1,6 @@
+# Robots.txt for ITR Education
+User-agent: *
+Disallow: /login/
+Allow: /
+
+Sitemap: http://itr-learning.com/sitemap.xml

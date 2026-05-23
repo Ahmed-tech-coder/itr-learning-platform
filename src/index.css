@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* aspect-video */
+.video-js,
+.video-js video {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+
+/* ITR Education Design System */
+@layer base {
+  :root {
+    /* Brand Colors */
+    --primary: 240 100% 48%;
+    /* #0000F4 */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 237 100% 82%;
+    /* #A4B1FF */
+    --primary-card: 217 33% 17%;
+    /* Card backgrounds */
+    --primary-medium: 217 33% 20%;
+    /* Medium backgrounds */
+    --primary-dark: 220 91% 5%;
+    /* Dark text color */
+    --sidebar: 220 91% 5%;
+    /* #040B1D - Sidebar background */
+
+    /* Background Colors */
+    --background: 0 0% 100%;
+    --background-dark: 225 74% 13%;
+    /* #031543 */
+    --background-darker: 224 69% 15%;
+    /* #0A1650 */
+    --background-darkest: 224 80% 7%;
+    /* #040B1D */
+
+    --foreground: 0 0% 100%;
+    --card: 225 74% 13%;
+    /* #031543 */
+    --card-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 20% / 0.2));
+    --gradient-card: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--primary) / 0.05));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+
+    /* Interactive States */
+    --border: 240 100% 48%;
+    --input: 225 74% 13%;
+    --ring: 240 100% 48%;
+    --muted: 225 74% 13%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Semantic Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 10px 15px -3px hsl(var(--primary) / 0.1);
+    --shadow-large: 0 25px 50px -12px hsl(var(--primary) / 0.25);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-6 py-3 font-medium transition-all duration-300 shadow-[var(--shadow-soft)] hover:shadow-[var(--shadow-medium)] hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg px-6 py-3 font-medium transition-all duration-300 hover:shadow-[var(--shadow-soft)];
+  }
+
+  .btn-ghost {
+    @apply text-primary hover:bg-primary/10 rounded-lg px-6 py-3 font-medium transition-all duration-300;
+  }
+
+  /* Card Variants */
+  .card-gradient {
+    @apply bg-gradient-to-b from-black to-black/20 backdrop-blur-sm border border-primary/20 rounded-3xl p-6 transition-all duration-300 hover:scale-105;
+
+    box-shadow:
+      0px -10px 10px 0px #00ADFE40 inset,
+      0px 4px 4px 0px #1DA1F242 inset;
+  }
+
+  .card-dark {
+    @apply bg-card text-card-foreground rounded-xl p-6 border border-primary/20 transition-all duration-300;
+
+    box-shadow:
+      0px -10px 10px 0px #00ADFE40 inset,
+      0px 4px 4px 0px #1DA1F242 inset;
+  }
+
+  /* Button Gradient */
+  .btn-gradient {
+    @apply rounded-full p-3 transition-all duration-300 hover:scale-110 text-white;
+
+    background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.2));
+    border: 1px solid rgba(0, 173, 254, 0.2);
+    backdrop-filter: blur(6px);
+
+    box-shadow:
+      0px -10px 10px 0px #00ADFE40 inset,
+      0px 4px 4px 0px #1DA1F242 inset;
+  }
+
+  .btn-gradient:hover {
+    background: linear-gradient(to bottom, #1DA1F2, #00ADFE40);
+  }
+
+
+
+  /* Navigation */
+  .nav-link {
+    @apply text-foreground hover:text-primary border-b-2 border-transparent hover:border-primary pb-2 transition-all duration-300 font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-primary border-primary;
+  }
+
+  /* Inputs */
+  .input-field {
+    @apply bg-input border border-primary/20 text-foreground rounded-lg px-4 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-300 outline-none;
+  }
+
+  /* Gradients */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  /* Arabic Font Weights */
+  .font-arabic-light {
+    font-weight: 300;
+  }
+
+  .font-arabic-normal {
+    font-weight: 400;
+  }
+
+  .font-arabic-medium {
+    font-weight: 500;
+  }
+
+  .font-arabic-semibold {
+    font-weight: 600;
+  }
+
+  .font-arabic-bold {
+    font-weight: 700;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-16 px-4 md:px-8 lg:px-16;
+  }
+
+  /* Container */
+  .container-custom {
+    @apply p-3 w-full mx-auto px-4 md:px-8 lg:px-16;
+  }
+}
