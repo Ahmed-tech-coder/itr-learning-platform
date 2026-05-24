@@ -44,13 +44,13 @@ ITR Education is a comprehensive, responsive, right-to-left (RTL) Arabic E-learn
 
 ## 4. Screenshots Section
 
-Below is a conceptual visualization of the platform's user interface. _(Replace these mock paths with actual screenshot files once deployed)_
+Below is a preview of the platform's user interface and core dashboards.
 
-|                               **Landing Page & Hero Section**                                |                             **Student Learning Dashboard**                              |
-| :------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------: |
-|  ![Landing Page Preview](https://placehold.co/600x350/040b1d/ffffff?text=ITR+Landing+Page)   | ![Dashboard Preview](https://placehold.co/600x350/040b1d/ffffff?text=Student+Dashboard) |
-|                                **Adaptive HLS Video Player**                                 |                           **Admin Dashboard & KPI Analytics**                           |
-| ![Video Player Preview](https://placehold.co/600x350/040b1d/ffffff?text=Advanced+HLS+Player) |  ![Admin KPI Preview](https://placehold.co/600x350/040b1d/ffffff?text=Admin+Analytics)  |
+|      **Landing Page & Hero Section**      |     **Student Learning Dashboard**     |
+| :---------------------------------------: | :------------------------------------: |
+| ![Landing Page Preview](src/assets/1.png) | ![Dashboard Preview](src/assets/2.png) |
+|       **Adaptive HLS Video Player**       |  **Admin Dashboard & KPI Analytics**   |
+| ![Video Player Preview](src/assets/3.png) | ![Admin KPI Preview](src/assets/4.png) |
 
 ---
 
@@ -326,4 +326,4 @@ This codebase is released under the **MIT License**. For complete documentation,
 <div align="center">
   <sub>صنع بحب وشغف لدعم مسيرة التعلم والتقدم التقني 🚀</sub>
 </div>
-"# itr-learning-platform" 
+"# itr-learning-platform"
